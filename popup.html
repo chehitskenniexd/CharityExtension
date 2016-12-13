@@ -16,14 +16,26 @@
       -
       - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
      -->
-  <!--
-    <script src="popup.js"></script>
-  -->
-</head>
 
+  <script src="popup.js" defer></script>
+</head>
 <body>
+
   <div class="container">
-    <h1 id="container_title" style="{}">NAME</h1>
+    <div class="container" id="title_container">
+      <img src="droplet128.png" alt="blood drop" style="width:48px;height:48px" />
+      <h1 id="ctitle">NAME</h1>
+    </div>
+  </div>
+  <div class="container">
+    <div class="container" id="buttons_container">
+      <button id="blood_button" href="http://www.redcrossblood.org/donating-blood">
+        Donate Blood
+      </button>
+      <button id="money_button" href="https://www.redcross.org/donate/donation">
+        Donate cash money $$$
+      </button>
+    </div>
   </div>
   <div id="status"></div>
   <img id="image-result" hidden>
