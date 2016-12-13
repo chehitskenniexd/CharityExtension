@@ -2,7 +2,7 @@
   "manifest_version": 2,
 
   "name": "Code Red",
-  "description": "This extension shows a Google Image search result for the current page",
+  "description": "This extension will prompt you to donate to the Red Cross.",
   "version": "1.0",
 
   "browser_action": {
@@ -30,5 +30,8 @@
             "content.js"
         ]
     }
-  ]
+  ],
+  "icons": { "16": "droplet16.png",
+           "48": "droplet48.png",
+          "128": "droplet128.png" }
 }
