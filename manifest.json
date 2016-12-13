@@ -23,6 +23,9 @@
         "matches" : [
             "<all_urls>"
         ],
+        "exclude_matches": [
+          "http://www.redcrossblood.org/*"
+        ],
         "js" : [
             "content.js"
         ]

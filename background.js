@@ -1,16 +1,8 @@
-// when three keywords are found, pop up the extension
-
-chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-  chrome.tabs.sendMessage(tabs[0].id, {greeting: "hello"}, function(response) {
-    console.log(response.farewell);
-  });
-});
 
 var notifId = '';
 
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
-    console.log(' I hear youuuu');
     chrome.notifications.create(getNotificationId(), {
       type: "image",
       iconUrl: 'droplet48.png',
@@ -27,8 +19,7 @@ chrome.runtime.onMessage.addListener(
       imageUrl: 'droplet128.png',
       requireInteraction: true
     }, function(id) {
-      console.log(id);
-      notifId = id;
+      myNotifId = id;
     });
   });
 
@@ -37,10 +28,14 @@ function getNotificationId() {
     return id.toString();
 }
 
-chrome.notifications.onButtonClicked.addListener(function(notifId, 0) {
+chrome.notifications.onButtonClicked.addListener(function(notifId, btnIdx) {
+  if (notifId === myNotifId) {
+    if (btnIdx === 0) {
+      chrome.tabs.create({url: 'http://www.redcrossblood.org/donating-blood'});
+    } else {
+      chrome.tabs.create({url: 'https://www.redcross.org/donate/donation'});
+    }
+    chrome.notifications.clear(notifId);
+  }
+});
 
-})
-
-chrome.notifications.onButtonClicked.addListener(function(notifId, 1) {
-
-})
