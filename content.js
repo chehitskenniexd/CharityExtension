@@ -1,4 +1,4 @@
-const keywords = ['hospital', 'hospitals', 'casualties', 'flood', 'hurricane', 'tsunami', 'fire', 'catastrophe', 'disaster', 'victims', 'blood', 'transfusion', 'transfusions', 'disease', 'diseases', 'illness', 'illnesses', 'domain', 'information' ];
+const keywords = ['hospital', 'hospitals', 'casualties', 'flood', 'hurricane', 'tsunami', 'fire', 'catastrophe', 'disaster', 'victims', 'blood', 'transfusion', 'transfusions', 'disease', 'diseases', 'illness', 'illnesses'];
 
 let count = 0;
 
