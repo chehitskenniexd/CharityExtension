@@ -1,0 +1,1 @@
+// when three keywords are found, pop up the extension
