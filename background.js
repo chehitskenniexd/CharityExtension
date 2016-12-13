@@ -16,7 +16,7 @@ chrome.runtime.onMessage.addListener(
           title: 'Donate $$$'
         }
       ],
-      imageUrl: 'droplet128.png',
+      imageUrl: 'images/redcross' + Math.floor(Math.random() * 6) + '.jpg',
       requireInteraction: true
     }, function(id) {
       myNotifId = id;
