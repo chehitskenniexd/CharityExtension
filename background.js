@@ -10,10 +10,10 @@ chrome.runtime.onMessage.addListener(
       message: 'You can make a difference in the world with your donation.',
       buttons: [
         {
-          title: 'Donate blood'
+          title: 'Donate Blood'
         },
         {
-          title: 'Donate $$$'
+          title: 'Donate Funds'
         }
       ],
       imageUrl: 'images/redcross' + Math.floor(Math.random() * 6) + '.jpg',
